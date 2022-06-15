@@ -1,0 +1,12 @@
+{
+    "name": "root/ar_r_dm",
+    "autoload": {
+        "psr-4": {
+            "Classes\\": "src/"
+        }
+    },
+    "require": {
+        "ext-mysqli": "*",
+        "ext-pdo": "*"
+    }
+}
