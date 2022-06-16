@@ -2,7 +2,8 @@
     "name": "root/ar_r_dm",
     "autoload": {
         "psr-4": {
-            "Classes\\": "src/"
+            "Classes\\": "src/",
+            "Controllers\\": "Controllers/"
         }
     },
     "require": {
