@@ -1,0 +1,90 @@
+/*Body*/
+body {
+    font-size: 12px;
+    font-family: Arial;
+}
+
+p {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #ecf0f1;
+    font-size: 16px;
+}
+
+/*table*/
+.table {
+    width: 20%;
+    border-collapse: collapse;
+}
+
+.table td {
+    padding: 6px 16px;
+}
+
+.table thead tr {
+    font-weight: bold;
+    border-top: 1px solid #e8e9eb;
+    color: darkblue;
+}
+
+.table tr {
+    border-bottom: 1px solid #e8e9eb;
+}
+
+.table tbody tr:hover {
+    background: #e8f6ff;
+}
+
+/*Buttons*/
+.button {
+    margin: 0;
+    position: relative;
+    width: 20%;
+    height: 50px;
+    background-color: #34495e;
+    border-radius: 8px;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    border-width: 0;
+}
+
+.button:hover {
+    transition: all .2s ease 0s;
+    background-color: #3498db;
+}
+
+/*Form*/
+form input {
+    width: 20%;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 16px;
+    background: white;
+    border-width: 2px;
+    border-color: #34495e;
+    height: 50px;
+}
+
+form select {
+    width: 32%;
+    height: 50px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    border-color: lightgray;
+}
+
+form select:hover {
+    border-color: darkgray;
+}
+
+form select optgroup {
+    font-size: 16px;
+}

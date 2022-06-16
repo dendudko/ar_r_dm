@@ -1,0 +1,14 @@
+<html>
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<h2>{{ text }}</h2>
+<table class="table">
+    <thead><tr><td>ID</td><td>Имя</td></tr></thead>
+    {% for result in results %}
+        <tr><td>{{ result['id'] }}</td><td>{{ result['name'] }}</td></tr>
+    {% endfor %}
+</table>
+</body>
+</html>
