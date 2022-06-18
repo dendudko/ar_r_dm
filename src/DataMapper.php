@@ -1,26 +1,21 @@
 <?php
 
 namespace Classes;
-
 use PDO;
 
-class ActiveRecord
+class DataMapper
 {
     private PDO $pdo;
-    private int $id;
-    private string $name;
 
     public function __construct()
     {
         $this->pdo = new PDO('mysql:host=localhost;dbname=easyDB', 'root', 'password');
     }
 
-    private function returnBrothers($result){
+    protected function returnBrothers($result){
         $brothers = array();
         foreach ($result as $res){
-            $brat = new ActiveRecord();
-            $brat->setId($res['id']);
-            $brat->setName($res['name']);
+            $brat = new Brat($res['id'],$res['name']);
             $brothers[] = $brat;
         }
         return $brothers;
@@ -61,25 +56,4 @@ class ActiveRecord
         $result->execute();
         return $this->selectAll();
     }
-
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
 }
