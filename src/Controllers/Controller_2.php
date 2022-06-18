@@ -2,7 +2,7 @@
 
 namespace Controllers;
 
-use Classes\Repository;
+use DAL\Repository;
 
 class Controller_2 extends BaseClass
 {

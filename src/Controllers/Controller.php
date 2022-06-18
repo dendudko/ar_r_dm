@@ -2,7 +2,7 @@
 
 namespace Controllers;
 
-use Classes\ActiveRecord;
+use DAL\ActiveRecord;
 
 class Controller extends BaseClass
 {

@@ -13,20 +13,20 @@ class BaseClass
 
     public function __construct()
     {
-        $this->loader = new FilesystemLoader(dirname(__DIR__) . "/templates");
+        $this->loader = new FilesystemLoader(dirname(__DIR__, 2) . "/templates");
         $this->twig = new Environment($this->loader);
         $this->uri = $_SERVER['REQUEST_URI'];
     }
 
-    public function showMenu($page){
-        ?>
-        <button class="button" onclick="window.location.href = 'http://fefu.ml:1613/active_record?'"
-                style="margin-left: 30%;">Active Record
-        </button>
-        <button class="button" onclick="window.location.href = 'http://fefu.ml:1613/repository_data_mapper?'"
-                style="margin: 0;">Repository + Data Mapper
-        </button>
-        <?php
+    public function showMenu($page)
+    {
+        if ($page=='active_record'){
+            $title='Active Record';
+        }
+        else if ($page=='repository_data_mapper'){
+            $title='Repository + Data Mapper';
+        }
+        echo $this->twig->render('menu.html.twig',['title'=>$title]);
         echo $this->twig->render('input.html.twig', ['page' => $page]);
     }
 

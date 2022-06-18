@@ -1,11 +1,10 @@
 <?php
 
-namespace Classes;
+namespace DAL;
 
 class Repository
 {
     private DataMapper $mapper;
-    private $brothers = array();
 
     public function __construct()
     {
